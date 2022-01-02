@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='pt'>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Quiz | Gearfim </title>
+	<link rel='stylesheet' type='text/css' href='./css.css'/>
+</head>
+<body>
+	<div class='quiz-title'><h1>QUIZ | Selecione a opção correcta</h1></div>
+	<div class="quiz-result-area quiz-result-hidden">
+		<p>Voce acertou <span id='quiz-result'>--</span> do Quiz</p>
+	</div>
+
+	<div class='quiz-wrapper'>
+		<form class='quiz-form'>
+			<fieldset>
+				<legend>1. HTML5 é uma  Linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion1" value="A"> Estilização</label>
+				<label><input type="radio" name="inputQuestion1" value="B"> Programação</label>
+				<label><input type="radio" name="inputQuestion1" value="C" checked> Exploração de dados</label>
+				<label><input type="radio" name="inputQuestion1" value="D"> Marcação de HiperTexto</label>
+			</fieldset>
+			<fieldset>
+				<legend>2. CSS3 é uma linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion2" value="A"> Programação</label>
+				<label><input type="radio" name="inputQuestion2" value="B" checked> Marcação de HiperTexto</label>
+				<label><input type="radio" name="inputQuestion2" value="C"> Estilização</label>
+				<label><input type="radio" name="inputQuestion2" value="D"> Exploração de dados</label>
+			</fieldset>
+			<fieldset>
+				<legend>3. JavaScript é uma linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion3" value="A"> Programação</label>
+				<label><input type="radio" name="inputQuestion3" value="B" checked> Estilização</label>
+				<label><input type="radio" name="inputQuestion3" value="C"> Marcação de HiperTexto</label>
+				<label><input type="radio" name="inputQuestion3" value="D"> Exploração de dados</label>
+
+			</fieldset>
+			<fieldset>
+				<legend>4. Onde é que as variáveis são armazenadas?</legend>
+				<label><input type="radio" name="inputQuestion4" value="A"> No Heap</label>
+				<label><input type="radio" name="inputQuestion4" value="B"> Na Satck</label>
+				<label><input type="radio" name="inputQuestion4" value="C"> No Disco duro</label>
+				<label><input type="radio" name="inputQuestion4" value="D" checked> Na núven</label>
+			</fieldset>
+			<div class='quiz-result'>
+				<div><button>Enviar</button></div>
+			</div>
+			
+		</form>
+	</div>	
+<script src="./app.js"></script>
+</body>
+</html>
