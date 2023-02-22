@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meu Portfólio</title>
+	<meta charset = "UTF-8"/>
+	<link rel="stylesheet" type="text/css" href="./css.css"/>
+	<link rel="stylesheet" type="text/css" href="./quiz.css"/>
+</head>
+<body>
+	
+	<div class = "title-container">
+		<div>
+			<h1>Quiz Interactivo</h1>
+			<div>
+				<p>Uma pequena aplicação de perguntas e respostas.</p><br>
+				<a class="btn btn-orange btn-go-to-repository">Baixar Código</a>
+			</div>
+			
+		</div>
+		<div></div>
+	</div>
+
+	<div class = "container quiz-wrapper">
+
+		<h2 class = "quiz-result"></h2>
+		
+		<form class='quiz-form'>
+			<fieldset>
+				<legend>1. HTML5 é uma  Linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion1" value="A"> Estilização</label>
+				<label><input type="radio" name="inputQuestion1" value="B"> Programação</label>
+				<label><input type="radio" name="inputQuestion1" value="C" checked> Exploração de dados</label>
+				<label><input type="radio" name="inputQuestion1" value="D"> Marcação de HiperTexto</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>2. CSS3 é uma linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion2" value="A"> Programação</label>
+				<label><input type="radio" name="inputQuestion2" value="B" checked> Marcação de HiperTexto</label>
+				<label><input type="radio" name="inputQuestion2" value="C"> Estilização</label>
+				<label><input type="radio" name="inputQuestion2" value="D"> Exploração de dados</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>3. JavaScript é uma linguagem de:</legend>
+				<label><input type="radio" name="inputQuestion3" value="A"> Programação</label>
+				<label><input type="radio" name="inputQuestion3" value="B" checked> Estilização</label>
+				<label><input type="radio" name="inputQuestion3" value="C"> Marcação de HiperTexto</label>
+				<label><input type="radio" name="inputQuestion3" value="D"> Exploração de dados</label>
+			</fieldset>
+
+			<fieldset>
+				<legend>4. Onde é que as variáveis são armazenadas?</legend>
+				<label><input type="radio" name="inputQuestion4" value="A"> No Heap</label>
+				<label><input type="radio" name="inputQuestion4" value="B"> Na Satck</label>
+				<label><input type="radio" name="inputQuestion4" value="C"> No Disco duro</label>
+				<label><input type="radio" name="inputQuestion4" value="D" checked> Na núven</label>
+			</fieldset>
+
+			<div class="btn-group">
+				<div></div>
+				<button class="btn btn-blue">Enviar Quiz</button>
+			</div>
+		
+		</form>
+	</div>
+
+	<script src="./temps.js"></script>
+	<script src="./navigator.js"></script>
+	<script src="./quiz.js"></script>
+</body>
+</html>
