@@ -1,42 +1,59 @@
 const form = query('.quiz-form')
-const result = query('.quiz-result')
-const correctAnswers = ['D', 'C', 'A', 'B']
+const scoreResultContainer = query('.score-result-container')
+const correctAnswers = ['D', 'C', 'A', 'B', 'C']
 
 const btnGoToRepository = query('.btn-go-to-repository')
 
-form.addEventListener('submit', event => {
-	event.preventDefault()
+const getUserAnswers = userAnswers => {
+	correctAnswers.forEach((_, index) => {
+		const userAnswer = event.target[`inputQuestion${index + 1}`].value
+		userAnswers.push(userAnswer)
+	})
+}
 
-	let score = 0
-	const userAnswers = [
-		event.target.inputQuestion1.value,
-		event.target.inputQuestion2.value,
-		event.target.inputQuestion3.value,
-		event.target.inputQuestion4.value
-	]
+const showScore = () => {
+	setAttribute(scoreResultContainer, 'class', 'quiz-result-style')
+}
 
-	userAnswers.forEach((userAnswer, index) => {
+const animateScore = score => {
+	let timer = null
+	const time = 20
+	let counter = 0
 
-		if (userAnswer === correctAnswers[index]){
-			score += 25
+	timer = setInterval(() => {
+		
+		scoreResultContainer.textContent = `Acertou ${counter}% do quiz!`
+
+		if (score === counter) {
+			clearInterval(timer)
 		}
 
-		let counter  = 0
-		const timer = setInterval(() => {	
+		counter++
+	}, time)
 
-			if (counter === score) {
-				clearInterval(timer)
-			}
+	scrollTo({
+		top: 0,
+		left: 0,
+		behavior: 'smooth'
+	})
+}
 
-			result.textContent = `Acertou ${counter}% do quiz!`
+form.addEventListener('submit', event => {
+	event.preventDefault()
+	const userAnswers = []
 
-			counter ++
-		}, 40)
+	let score = 0
+	
+	getUserAnswers(userAnswers)
+	
+	userAnswers.forEach((userAnswer, index) => {
+		if (userAnswer === correctAnswers[index]) {
+			score += 20
+		}
 	})
 
-	scrollTo(0,0)
-	addClass(result, 'quiz-result-style')
-
+	animateScore(score)
+	showScore()
 })
 
 function goToRepository () {
